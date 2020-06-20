@@ -1,0 +1,144 @@
+body {
+    background: #222;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1280px;
+    text-align: center;
+}
+
+
+/* CALC 1 */
+
+.calc_header1 {
+    color: rgb(102, 179, 255);
+}
+
+.calc {
+    height: 250px;
+    color: rgb(102, 179, 255);
+    width: 200px;
+    margin: 0 auto;
+    border: solid 1px #24c8f9;
+    box-sizing: border-box;
+    padding-top: 50px;
+    background: rgb(255, 128, 213);
+    background: linear-gradient( 35deg, rgba(255, 128, 213, 0.6587009803921569) 14%, rgba(36, 200, 249, 0.7371323529411764) 98%);
+}
+
+.buttons button {
+    background-color: rgb(255, 128, 213);
+    height: 25px;
+    outline: none;
+    border: 0;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.buttons button:last-child {
+    margin-right: 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.elem {
+    display: block;
+    width: 120px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #28c8f7;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+
+/* CALC 2 */
+
+.header__clac2 {
+    color: rgb(205, 169, 157);
+}
+
+.calc2 {
+    height: 370px;
+    color: rgb(102, 179, 255);
+    width: 240px;
+    margin: 0 auto;
+    border: solid 3px #abeaff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #ba9b91;
+}
+
+.calc2__out {
+    width: 200px;
+    min-height: 60px;
+    border-radius: 5px;
+    background-color: #abeaff;
+    display: block;
+    text-align: right;
+    padding: 0 15px;
+    line-height: 60px;
+    font-size: 38px;
+}
+
+.calc2__buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.calc2__buttons button {
+    width: 42px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 1px #abeaff;
+    outline: none;
+    cursor: pointer;
+    color: rgb(102, 179, 255);
+    margin: 3px;
+    font-size: 18px;
+}
+
+.calc2__buttons button:active {
+    background-color: #abeaff;
+}
+
+.btn_flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+/* #zero {
+    width: 100px;
+    padding-left: 15px;
+    border-radius: 30px;
+    margin-right: 0;
+    text-align: left;
+}
+
+#backspace {
+    width: 100px;
+    border-radius: 30px;
+} */
+
+
+/* CALC 3 */
+
+.calc3__header {
+    color: #919091;
+}
