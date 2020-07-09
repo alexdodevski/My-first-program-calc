@@ -1,9 +1,9 @@
 "use strict";
 
-let out = document.querySelector(".calc2__out");
+let out = document.querySelector(".calc__out");
 
 function insert(num) {
-    let outInner = out.innerHTML;
+    let outInner = out.value;
     let plus = "+";
     let minus = "-";
     let division = "/";
@@ -21,8 +21,8 @@ function insert(num) {
         num === dot
     ) {
         for (let i = outInner.length; i < mark; i++) {
-            if (num === division || (num === multiplication && i < 1)) {
-                out.innerHTML += "";
+            if ((num === division && i < 1) || (num === multiplication && i < 1)) {
+                out.value += "";
             } else if (
                 outInner[i - 1] === plus ||
                 outInner[i - 1] === minus ||
@@ -30,24 +30,24 @@ function insert(num) {
                 outInner[i - 1] === multiplication ||
                 outInner[i - 1] === dot
             ) {
-                out.innerHTML += "";
+                out.value += "";
             } else {
-                out.innerHTML += num;
+                out.value += num;
             }
         }
     } else if (num === roundBracketLeft) {
         for (let i = outInner.length; i < mark; i++) {
             if (i < 1) {
-                out.innerHTML += num;
+                out.value += num;
             } else if (
                 outInner[i - 1] === plus ||
                 outInner[i - 1] === minus ||
                 outInner[i - 1] === multiplication ||
                 outInner[i - 1] === division
             ) {
-                out.innerHTML += num;
+                out.value += num;
             } else {
-                out.innerHTML += "";
+                out.value += "";
             }
         }
     } else if (num === roundBracketRight) {
@@ -56,35 +56,29 @@ function insert(num) {
                 (outInner.includes("(") && isFinite(outInner[i - 1])) ||
                 outInner[i - 1] === roundBracketRight
             ) {
-                out.innerHTML += num;
+                out.value += num;
             } else {
-                out.innerHTML += "";
+                out.value += "";
             }
         }
     } else {
-        out.innerHTML += num;
+        out.value += num;
     }
 }
 
 function clearOut() {
-    out.innerHTML = "";
+    out.value = "";
 }
 
 function equal() {
-    if (eval(out.innerHTML) === Infinity) {
-        out.innerHTML = "it`s impossible";
+    if (eval(out.value) === Infinity) {
+        out.value = "it`s impossible";
         out.style.fontSize = 25 + "px";
-    } else if (eval(out.innerHTML) === undefined) {
-        out.innerHTML = "";
-    } else out.innerHTML = eval(out.innerHTML);
+    } else if (eval(out.value) === undefined) {
+        out.value = "";
+    } else out.value = eval(out.value);
 }
 
 function backSpace() {
-    out.innerHTML = out.innerHTML.substr(0, out.innerHTML.length - 1);
+    out.value = out.value.substr(0, out.value.length - 1);
 }
-
-// addEventListener("keydown", function(e) {
-//     console.log(e);
-//     if (e.key == 4) return insert("4");
-//     else if (e.key == "Enter") equal();
-// });

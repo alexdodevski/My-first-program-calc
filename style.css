@@ -5,65 +5,21 @@ body {
 .container {
     margin: 0 auto;
     width: 1280px;
+    height: 900px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* CALC 1 */
-
-.calc_header1 {
-    color: rgb(102, 179, 255);
+.header__calc {
+    color: rgb(205, 169, 157);
+    margin-bottom: 25px;
+    font-weight: bold;
 }
 
 .calc {
-    height: 250px;
-    color: rgb(102, 179, 255);
-    width: 200px;
-    margin: 0 auto;
-    border: solid 1px #24c8f9;
-    box-sizing: border-box;
-    padding-top: 50px;
-    background: rgb(255, 128, 213);
-    background: linear-gradient( 35deg, rgba(255, 128, 213, 0.6587009803921569) 14%, rgba(36, 200, 249, 0.7371323529411764) 98%);
-}
-
-.buttons button {
-    background-color: rgb(255, 128, 213);
-    height: 25px;
-    outline: none;
-    border: 0;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.buttons button:last-child {
-    margin-right: 0;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.elem {
-    display: block;
-    width: 120px;
-    text-align: center;
-    font-size: 24px;
-    background-color: #28c8f7;
-    border: none;
-    outline: none;
-    margin: 0 auto;
-    margin-bottom: 5px;
-}
-
-
-/* CALC 2 */
-
-.header__clac2 {
-    color: rgb(205, 169, 157);
-}
-
-.calc2 {
     height: 370px;
     color: rgb(102, 179, 255);
     width: 240px;
@@ -79,7 +35,7 @@ body {
     background-color: #ba9b91;
 }
 
-.calc2__out {
+.calc__out {
     width: 200px;
     min-height: 60px;
     border-radius: 5px;
@@ -88,10 +44,16 @@ body {
     text-align: right;
     padding: 0 15px;
     line-height: 60px;
-    font-size: 38px;
+    font-size: 28px;
+    border: 0;
+    outline: 0;
 }
 
-.calc2__buttons {
+.calc__out:focus {
+    box-shadow: 0 0 2pt 1pt rgb(102, 179, 255);
+}
+
+.calc__buttons {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -100,7 +62,7 @@ body {
     justify-content: space-evenly;
 }
 
-.calc2__buttons button {
+.calc__buttons button {
     width: 42px;
     height: 45px;
     border-radius: 50%;
@@ -112,7 +74,7 @@ body {
     font-size: 18px;
 }
 
-.calc2__buttons button:active {
+.calc__buttons button:active {
     background-color: #abeaff;
 }
 
@@ -122,23 +84,7 @@ body {
     width: 100%;
 }
 
-
-/* #zero {
-    width: 100px;
-    padding-left: 15px;
-    border-radius: 30px;
-    margin-right: 0;
-    text-align: left;
-}
-
-#backspace {
-    width: 100px;
-    border-radius: 30px;
-} */
-
-
-/* CALC 3 */
-
-.calc3__header {
-    color: #919091;
+.equality {
+    background-color: rgb(102, 179, 255);
+    color: white !important;
 }
