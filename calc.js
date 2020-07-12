@@ -1,6 +1,8 @@
 "use strict";
 
 let out = document.querySelector(".calc__out");
+let calc = document.querySelector(".calc");
+console.log(calc);
 
 function insert(num) {
     let outInner = out.value;
@@ -82,3 +84,17 @@ function equal() {
 function backSpace() {
     out.value = out.value.substr(0, out.value.length - 1);
 }
+
+out.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13) {
+        equal();
+    }
+});
+
+calc.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13) {
+        e.returnValue = false;
+        equal();
+    }
+    console.log(e);
+});

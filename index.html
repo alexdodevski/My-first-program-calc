@@ -12,7 +12,7 @@
     <div class="container">
         <h1 class="header__calc">The calculator</h1>
         <div class="calc">
-            <input type="text" autofocus class="calc__out" />
+            <input type="text" autofocus class="calc__out" onkeyup="this.value = this.value.replace(/[A-Za-zА-Яа-яЁё]/,'');" />
             <div class="calc__buttons">
                 <div class="buttons__one btn_flex">
                     <button onclick="clearOut()">c</button>
