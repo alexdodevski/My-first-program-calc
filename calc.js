@@ -4,6 +4,26 @@ let out = document.querySelector(".calc__out");
 let calc = document.querySelector(".calc");
 console.log(calc);
 
+// let arrSigns = [
+//     "+",
+//     "-",
+//     "/",
+//     "*",
+//     ".",
+//     "(",
+//     ")",
+//     "0",
+//     "1",
+//     "2",
+//     "3",
+//     "4",
+//     "5",
+//     "6",
+//     "7",
+//     "8",
+//     "9",
+// ];
+
 function insert(num) {
     let outInner = out.value;
     let plus = "+";
@@ -95,6 +115,7 @@ calc.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
         e.returnValue = false;
         equal();
+    } else if (e.keyCode === 67) {
+        clearOut();
     }
-    console.log(e);
 });
