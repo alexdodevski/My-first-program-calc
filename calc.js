@@ -2,27 +2,27 @@
 
 let out = document.querySelector(".calc__out");
 let calc = document.querySelector(".calc");
-console.log(calc);
+// let calcButton = document.querySelectorAll(".calc__buttons");
 
-// let arrSigns = [
-//     "+",
-//     "-",
-//     "/",
-//     "*",
-//     ".",
-//     "(",
-//     ")",
-//     "0",
-//     "1",
-//     "2",
-//     "3",
-//     "4",
-//     "5",
-//     "6",
-//     "7",
-//     "8",
-//     "9",
-// ];
+let arrSigns = [
+    "+",
+    "-",
+    "/",
+    "*",
+    ".",
+    "(",
+    ")",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+];
 
 function insert(num) {
     let outInner = out.value;
@@ -108,14 +108,40 @@ function backSpace() {
 out.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
         equal();
-    }
-});
-
-calc.addEventListener("keydown", (e) => {
-    if (e.keyCode === 13) {
-        e.returnValue = false;
-        equal();
-    } else if (e.keyCode === 67) {
+    } else if (e.key === "c") {
         clearOut();
     }
 });
+
+window.addEventListener("keydown", (e) => {
+    if (e.target !== out) {
+        if (e.keyCode === 13) {
+            e.returnValue = false;
+            equal();
+        } else if (e.keyCode === 67) {
+            clearOut();
+        } else if (arrSigns.includes(e.key)) {
+            insert(e.key);
+        }
+        console.log(out.value);
+    }
+});
+
+// calc.addEventListener("keydown", (e) => {
+//     if (e.keyCode === 13) {
+//         e.returnValue = false;
+//         equal();
+//     } else if (e.keyCode === 67) {
+//         clearOut();
+//     } else if (arrSigns.includes(e.key)) {
+//         insert(e.key);
+//     }
+
+// console.log(e);
+// });
+
+// calcButton.addEventListener("click", (e) => {
+//     calcButton.forEach((i) => console.log(i));
+// });
+
+// console.log(calcButton);
