@@ -122,15 +122,14 @@ window.addEventListener("keydown", (e) => {
             clearOut();
         } else if (arrSigns.includes(e.key)) {
             insert(e.key);
+        } else if (e.keyCode === 8) {
+            backSpace();
         }
-        console.log(out.value);
     }
 });
 
 calcButtons.forEach((item) => {
     item.addEventListener("click", (e) => {
-        console.log(e);
-        console.log(item);
         if (arrSigns.includes(item.innerHTML)) insert(item.innerHTML);
         else if (item.innerHTML === "=") equal();
         else if (item.innerHTML === "c") clearOut();
