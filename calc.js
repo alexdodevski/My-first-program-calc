@@ -138,3 +138,5 @@ calcButtons.forEach((item) => {
 });
 
 console.log(calcButtons);
+
+//check commit! 30/07/2020
